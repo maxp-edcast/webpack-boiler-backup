@@ -1,28 +1,15 @@
+require './style.sass'
 
 window.$ = require 'jquery'
 window.Vue = require('vue').default
-
+window.VueRouter = require('vue-router').default
 root_selector = '#root-wrapper'
 
-root_template = require("html-loader!./views/index.slim")
-test_template = require("html-loader!./views/test.slim")
-
-window.obj = {foo: "bar"}
-
-test_component =
-  template: test_template
-  props: ['foo']
-
-root_component =
-  data: ->
-    bar: @_props.foo || {a: 1}
-  template: root_template
-  props: ['foo']
-  components:
-    test: test_component
+components = require "./components.coffee"
+router = require('./router.coffee').load({components})
 
 $ ->
   new Vue
     el: root_selector
-    components:
-      root: root_component
+    components: components
+    router: router

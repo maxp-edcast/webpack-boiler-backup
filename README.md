@@ -11,14 +11,10 @@ It includes the following compilation setup:
    to produce browser-suitable ES5.
 2. .slim templates can be loaded into html strings via require.
    To do so: `template_html = require 'html-loader!./page.slim'`.
-   This uses the [slim-loader](http://github.com/maxpleaner/slim-lang-loader) I authored.
+   This uses the [slim-loader](http://github.com/maxpleaner/slim-lang-loader) I authored,
+   and in my experience works well with Vue or another framework uses HTML without core syntax extensions.
 3. .sass paths can be passed to `require` and they will be automatically
    appended to the page
-4. gifs can be manipulated and transformed to webm using the
-   [animation-loader](http://github.com/maxpleaner/animation-loader) I authored.
-   See that readme for more info.
-   **note** if using this some system dependencies are also needed.
-   Run `./install_system_deps.sh` in this case, to install ffmpeg and imagemagick
 
 ---
 
@@ -26,8 +22,8 @@ Getting started:
 
 - the entry point is entry.coffee. This can be changed by editing `webpack.config.js`
 - If changing the webpack.config.js file, the webpack.production.config.js should
-  also get the same changes so that the deployment build works correctly. 
-  The files are identical to one another in this boiler. 
+  also get the same changes so that the deployment build works correctly.
+  The files are identical to one another in this boiler.
 
 ---
 
