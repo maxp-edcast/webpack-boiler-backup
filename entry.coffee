@@ -1,16 +1,10 @@
 
 window.$ = require 'jquery'
 
-React = require 'react'
-ReactDOM = require 'react-dom'
+window.Vue = require('vue').default
 
-class Root extends React.Component
-  render: -> (
-    <b>hello world </b>
-  )
+template = require("html-loader!./views/index.slim")
 
-window.InitReact = ->
-  ReactDOM.render <Root/>, document.getElementById("root-wrapper")
-
-$ ->
-  InitReact()
+window.Root = new Vue
+  el: '#root-wrapper',
+  template: template

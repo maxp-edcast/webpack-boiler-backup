@@ -50,9 +50,9 @@ module.exports = {
     ],
 
     // Something needed for Vue
-    // alias: {
-    //   'vue$': 'vue/dist/vue.esm.js'
-    // }
+    alias: {
+      'vue$': 'vue/dist/vue.esm.js'
+    }
 
   },
 
