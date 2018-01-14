@@ -11,5 +11,6 @@ router = require('./router.coffee').load({components})
 $ ->
   new Vue
     el: root_selector
-    components: components
+    components:
+      navigation: components.navigation
     router: router

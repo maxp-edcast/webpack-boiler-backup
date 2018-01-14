@@ -41,9 +41,6 @@ module.exports = (->
 
   @root =
     template: require("html-loader!./views/root.slim")
-    components:
-      {@navigation}
-
 
   this
 
